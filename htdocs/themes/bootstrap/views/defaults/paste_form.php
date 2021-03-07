@@ -49,6 +49,7 @@
 
 			<div class="row">
 				<div class="span8">
+					<?php if (!$this->config->item('disable_shorturl')) { ?>
 					<div class="control-group">
 						<div class="controls">
 							<label class="checkbox">
@@ -64,6 +65,7 @@
 							</label>
 						</div>
 					</div>
+					<?php } ?>
 					<div class="control-group">
 						<div class="controls">
 							<label class="checkbox">
