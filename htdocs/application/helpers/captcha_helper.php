@@ -344,12 +344,12 @@ if (!function_exists('display_captcha')) {
         for ($i = 0; $i < ($circles * $points) - 1; $i++) {
             $theta = $theta + $thetac;
             $rad = $radius * ($i / $points);
-            $x = ($rad * cos($theta)) + $x_axis;
-            $y = ($rad * sin($theta)) + $y_axis;
+            $x = (int) ($rad * cos($theta)) + $x_axis;
+            $y = (int) ($rad * sin($theta)) + $y_axis;
             $theta = $theta + $thetac;
             $rad1 = $radius * (($i + 1) / $points);
-            $x1 = ($rad1 * cos($theta)) + $x_axis;
-            $y1 = ($rad1 * sin($theta)) + $y_axis;
+            $x1 = (int) ($rad1 * cos($theta)) + $x_axis;
+            $y1 = (int) ($rad1 * sin($theta)) + $y_axis;
             imageline($im, $x, $y, $x1, $y1, $grid_color);
             $theta = $theta - $thetac;
         }
@@ -368,21 +368,21 @@ if (!function_exists('display_captcha')) {
 
         if ($use_font == false) {
             $font_size = 5;
-            $x = mt_rand(0, $img_width / ($length / 3));
+            $x = mt_rand(0, intval($img_width / ($length / 3)));
             $y = 0;
         } else {
             $font_size = 16;
-            $x = mt_rand(0, $img_width / ($length / 1.5));
+            $x = mt_rand(0, intval($img_width / ($length / 1.5)));
             $y = $font_size + 2;
         }
         for ($i = 0; $i < strlen($word); $i++) {
 
             if ($use_font == false) {
-                $y = mt_rand(0, $img_height / 2);
+                $y = mt_rand(0, intval($img_height / 2));
                 imagestring($im, $font_size, $x, $y, substr($word, $i, 1), $text_color);
                 $x += ($font_size * 2);
             } else {
-                $y = mt_rand($img_height / 2, $img_height - 3);
+                $y = mt_rand(intval($img_height / 2), $img_height - 3);
                 imagettftext($im, $font_size, $angle, $x, $y, $text_color, $font_path, substr($word, $i, 1));
                 $x += $font_size;
             }
