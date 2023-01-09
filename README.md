@@ -1,5 +1,9 @@
 Stikked is an Open-Source PHP Pastebin, with the aim of keeping a simple and easy to use user interface.
 
+This is the stikked-fit version that has been forked from Stikked 0.14.0 in January 2023 as the [repository from Claude Hohl](https://github.com/claudehohl/Stikked) became stale for three years.
+
+Please check [Faster IT GmbH](https://www.faster-it.com/) if you want to support a code review of Stikked and are interested in continued maintenance.
+
 Stikked allows you to easily share code with anyone you wish. Based on the [original Stikked](http://code.google.com/p/stikked/) with lots of bugfixes and improvements.
 
 Here are some features:
@@ -24,9 +28,9 @@ Here are some features:
 Try it out
 ----------
 
-https://paste.scratchbook.ch/
+https://paste.scratchbook.ch/ (defunct)
 
-See an encrypted paste: https://paste.scratchbook.ch/view/1427473f#iP7p05DRH0BC72qQjxv01BjUeOmNV073
+See an encrypted paste: https://paste.scratchbook.ch/view/1427473f#iP7p05DRH0BC72qQjxv01BjUeOmNV073 (defunct)
 
 
 Prerequisites
@@ -41,7 +45,7 @@ Prerequisites
 Installation
 ------------
 
-1. Download Stikked from https://github.com/claudehohl/Stikked/releases
+1. Git clone stikked-fit
 2. Create a user and database for Stikked
 3. Copy application/config/stikked.php.dist to application/config/stikked.php
 4. Edit configuration settings in application/config/stikked.php - everything is described there
@@ -80,6 +84,20 @@ In the folder doc/, you will find:
 Changelog
 ---------
 
+#### Upgrade instructions
+
+Copy your htdocs/application/stikked.php config file away. Upload the new version. Copy it back.
+
+### Version 0.15.0-fit:
+
+* Fix captcha_helper for PHP 8.0+ compliance [Daniel Lange/FIT]
+* Fix JSMin PHP 8.0+ error [Daniel Lange/FIT]
+* Fix Carabiner PHP 8.0+ error [Daniel Lange/FIT]
+* Update GeSHi to v1.0.9.1 [Daniel Lange/FIT]
+* Update Codeigniter to v3.1.13 [Daniel Lange/FIT]
+* Hide shorturl checkbox when disabled [Krayon]
+* Corrected XSS vuln in title param [Krayon]
+
 ### Version 0.14.0:
 
 * Rewritten the Docker setup to be simple and clean:
@@ -90,10 +108,6 @@ Changelog
 * force private-flag when a previously encrypted paste gets pasted public
 * Fixed a critical bug that allowed pasting despite captcha
 * Various bugfixes and improvements
-
-#### Upgrade instructions
-
-Copy your htdocs/application/stikked.php config file away. Upload the new version. Copy it back.
 
 ### Version 0.13.0:
 
