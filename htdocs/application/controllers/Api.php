@@ -132,7 +132,7 @@ class Api extends Main
         }
         $this->load->model('pastes');
         $pastes = $this->pastes->getLists('api/recent');
-        $pastes = $pastes['pastes'];
+        $pastes = $pastes['pastes'] ?? [];
         $data = array();
         foreach ($pastes as $paste) {
             $data[] = array(
@@ -158,7 +158,7 @@ class Api extends Main
         }
         $this->load->model('pastes');
         $pastes = $this->pastes->getTrends('api/trending', 2);
-        $pastes = $pastes['pastes'];
+        $pastes = $pastes['pastes'] ?? [];
         $data = array();
         foreach ($pastes as $paste) {
             $data[] = array(
@@ -180,6 +180,8 @@ class Api extends Main
         }
 
         $languages = $this->languages->get_languages();
+        // remove the 0 --- divider between favorite languages and the rest
+        unset($languages["0"]);
         echo json_encode($languages);
     }
 }

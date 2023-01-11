@@ -90,6 +90,7 @@ Copy your htdocs/application/stikked.php config file away. Upload the new versio
 
 ### Version 0.15.0-fit:
 
+* Fix some issues in the API [Daniel Lange/FIT]
 * Make replying more robust in case of expired pastes [Daniel Lange/FIT]
 * Fix the bootstrap theme [Daniel Lange/FIT]
 * Fix captcha_helper for PHP 8.0+ compliance [Daniel Lange/FIT]
