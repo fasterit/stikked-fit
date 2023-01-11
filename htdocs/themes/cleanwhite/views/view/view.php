@@ -17,7 +17,7 @@ if(isset($insert)){
 		<h1 class="pagetitle right"><?php echo $title; ?></h1>
 		<div class="meta">
 			<span class="detail by"></span>
-						<?php if(isset($inreply)){?><span class="detail by"><?php echo lang('paste_isareply'); ?> <a href="<?php echo $inreply['url']?>"><?php echo $inreply['title']; ?></a> <?php echo strtolower(lang('paste_from')); ?> <?php echo $inreply['name']; ?>
+						<?php if(isset($inreply) && is_array($inreply)){?><span class="detail by"><?php echo lang('paste_isareply'); ?> <a href="<?php echo $inreply['url']?>"><?php echo $inreply['title']; ?></a> <?php echo strtolower(lang('paste_from')); ?> <?php echo $inreply['name']; ?>
 			<?php if($seg3 != 'diff'){ ?>
 				    - <a href="<?php echo $url . '/diff'; ?>"><?php echo lang('paste_viewdiff'); ?></a>
 			<?php }else{ ?>
