@@ -7,6 +7,7 @@
 		</div>
 	</div>
 	<div class="col-12 col-sm-12 col-lg-12">
+	<p>This is Stikked-fit, a fork of Stikked created 2023 due to the previous upstream becoming stale.</p>
 	<p>Stikked is an Open-Source PHP Pastebin, with the aim of keeping a simple and easy to use user interface.</p>
     <p>Stikked allows you to easily share code with anyone you wish. Here are some features:</p>
 
@@ -20,7 +21,7 @@
         <li>Anti-Spam features</li>
         <li>Themes support</li>
         <li>Multilanguage support</li>
-        <li>And many more. View <a href="http://maketecheasier.com/run-your-own-pastebin-with-stikked/2013/01/11">this review</a> or visit the <a href="https://github.com/claudehohl/Stikked">Repo on GitHub</a></li>
+        <li>And many more. Visit the <a href="https://github.com/fasterit/stikked-fit">stikked-fit repo on GitHub</a></li>
     </ul>
 	</div>
 </div>
