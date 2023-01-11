@@ -18,7 +18,7 @@ Here are some features:
 * Encrypted pastes
 * Burn on reading
 * Anti-Spam features
-* Themes support
+* Themes support ("default" and "bootstrap" are the ones supporting all current functionality)
 * Multilanguage support
 * Stikked client with support for client side encryption/decryption: [gostikkit](https://github.com/tcolgate/gostikkit)
 * Another CLI tool requiring only curl program: [pbin](https://github.com/glensc/pbin)
@@ -90,8 +90,10 @@ Copy your htdocs/application/stikked.php config file away. Upload the new versio
 
 ### Version 0.15.0-fit:
 
+* Make replying more robust in case of expired pastes [Daniel Lange/FIT]
+* Fix the bootstrap theme [Daniel Lange/FIT]
 * Fix captcha_helper for PHP 8.0+ compliance [Daniel Lange/FIT]
-* Fix JSMin PHP 8.0+ error [Daniel Lange/FIT]
+* Fix JSMin PHP 8.0+ errors [Daniel Lange/FIT]
 * Fix Carabiner PHP 8.0+ error [Daniel Lange/FIT]
 * Update GeSHi to v1.0.9.1 [Daniel Lange/FIT]
 * Update Codeigniter to v3.1.13 [Daniel Lange/FIT]
