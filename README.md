@@ -62,6 +62,10 @@ Installation
 How to run it in Docker
 -----------------------
 
+> **Note**
+> The docker-compose.yml and docker/php/Dockerfile are quite outdated. You will have to update them to make it work.
+> PRs accepted :)
+
     docker-compose up
 
 This automatically builds the docker-image and fires up nginx, php and mariadb. Access your Stikked instance at http://localhost/.
