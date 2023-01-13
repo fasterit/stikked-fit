@@ -78,6 +78,10 @@
 		<code>echo foo | curl --data-urlencode text@- <?php echo site_url('api/create'); ?></code>
 	    <p class="explain">Create a paste based on standard output of a command.</p>
 
+		<h3>Create paste via a pipe with sudo, text format, setting the author and a 30 minute expiry</h3>
+		<code>sudo dmesg | curl -d private=1 -d lang=text -d name=`whoami` -d expire=30 --data-urlencode text@- <?php echo site_url('api/create'); ?></code>
+	    <p class="explain">Create a paste based capturing sudo dmesg and showing how to employ optional parameters to the paste creation.</p>
+
 		<h3>Get paste ;-)</h3>
 		<code>curl <?php echo site_url('view/raw/[pasteid]'); ?></code>
 	    <p class="explain">Display paste.</p>
