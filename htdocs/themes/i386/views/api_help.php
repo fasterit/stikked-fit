@@ -46,7 +46,7 @@
 		<code>lang=[language]</code>
 	    <p class="explain">
 		Use alternative syntax highlighting.<br />
-		Possible values: <?php echo $languages; ?>
+		Possible values: <?php echo str_replace(", 0,", ",", $languages); ?>
 	    </p>
 
 		<code>expire=[minutes]</code>
