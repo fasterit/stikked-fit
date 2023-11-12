@@ -350,7 +350,7 @@ if (!function_exists('display_captcha')) {
             $rad1 = $radius * (($i + 1) / $points);
             $x1 = (int) ($rad1 * cos($theta)) + $x_axis;
             $y1 = (int) ($rad1 * sin($theta)) + $y_axis;
-            imageline($im, $x, $y, $x1, $y1, $grid_color);
+            imageline($im, (int)$x, (int)$y, (int)$x1, (int)$y1, $grid_color);
             $theta = $theta - $thetac;
         }
 
