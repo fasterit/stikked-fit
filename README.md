@@ -4,6 +4,10 @@ This is the stikked-fit version that has been forked from Stikked 0.14.0 in Janu
 
 Please check [Faster IT GmbH](https://www.faster-it.com/) if you want to support a code review of Stikked and are interested in continued maintenance.
 
+As of 31 December 2024 we have no funding to continue maintaining stikked-fit. So we will put this repo to sleep and say good bye to the last full featured pastebin as we knew them for 2 decades.
+
+:-(  ->  😢
+
 Stikked allows you to easily share code with anyone you wish. Based on the [original Stikked](http://code.google.com/p/stikked/) with lots of bugfixes and improvements.
 
 Here are some features:
